@@ -1,0 +1,58 @@
+GIT
+	cloning existing Git directory
+		$ git clone https://github.optum.com/CommercialCloud-EAC/python-scripts.git
+	Checking sanity of files on this repo
+		$ git status
+	Adding new file to repository, after saving it in directory path
+		$ git add <file name>
+	Staging Modified Files
+		$ git add <modified file name>
+	Seeing git status ina  compact way (rathet than using git status command)
+		$ git status -s OR 	$ git status --short
+				 M CONTRIBUTING.md  		>>>> Modified and staged   
+				MM README.md				>>>> Modified,staged and then modified again
+				A  ellotxt.txt				>>>> Added and staged
+				M  requirements.txt			>>>> Modified but not staged
+				?? yo.txt					>>>> New files which are not tracked.
+	All the changes you made which are in staged
+		$ git diff --staged
+
+
+	Adding full repository from local machine to Git
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git init
+				Reinitialized existing Git repository in C:/Users/mdwive1/Documents/NDB/Moderniz                                                                                                                                  ed/FB/Medicare/ndb-fb-cred-provider-medicare/.git/
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git add .
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git commit -m "Add all my files"
+				On branch master
+				Your branch is up-to-date with 'origin/master'.
+				nothing to commit, working tree clean
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git remote add origin https://github.optum.com/pdp-pes-aws/ndb-fb-cred-provider-medicare.git
+				fatal: remote origin already exists.
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git remote rm origin
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git remote add origin https://github.optum.com/pdp-pes-aws/ndb-fb-cred-provider-medicare.git
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+			$ git push origin master
+				Counting objects: 429, done.
+				Delta compression using up to 8 threads.
+				Compressing objects: 100% (217/217), done.
+				Writing objects: 100% (429/429), 583.33 KiB | 0 bytes/s, done.
+				Total 429 (delta 166), reused 429 (delta 166)
+				remote: Resolving deltas: 100% (166/166), done.
+				To https://github.optum.com/pdp-pes-aws/ndb-fb-cred-provider-medicare.git
+				 * [new branch]      master -> master
+
+				mdwive1@LHTU05CG9015495 MINGW64 ~/Documents/NDB/Modernized/FB/Medicare/ndb-fb-cr                                                                                                                                  ed-provider-medicare (master)
+				$
+
